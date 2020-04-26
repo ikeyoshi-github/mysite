@@ -1,0 +1,837 @@
+@charset "UTF-8";
+body {
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Robot", "Droid Sans", "sans-serif";
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+ul,
+li,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+section {
+  margin-bottom: 140px;
+}
+
+.content-wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/*-----------------------------------------------------------------
+
+header
+
+------------------------------------------------------------------*/
+header {
+  width: 100%;
+  background-color: #e8e7e7;
+  height: 80px;
+  position: fixed;
+  opacity: 0.9;
+  /*nav-drawer*/
+}
+
+header #nav-drawer {
+  position: relative;
+  width: 96%;
+  margin-left: auto;
+  margin-right: 0;
+  z-index: 999;
+  /*チェックボックスを非表示*/
+  /*nav-unshown*/
+  /*ハンバーガーアイコン*/
+  /*nav-open*/
+  /*薄い黒幕：非表示*/
+  /*nav-close*/
+  /*nav-menu: defaulは非表示*/
+  /*nav-content*/
+  /*アイコンを押した nav-closeを表示する*/
+  /*nav-input:checked*/
+  /*アイコンを押した nav-contentを表示する*/
+  /*nav-input:checked*/
+}
+
+header #nav-drawer #co-name {
+  display: inline-block;
+  line-height: 80px;
+}
+
+header #nav-drawer .nav-unshown {
+  display: none;
+}
+
+header #nav-drawer #nav-open {
+  display: block;
+  width: 26px;
+  height: 20px;
+  /*span*/
+  /*ハンバーガーの位置を右寄せに*/
+  /*span before*/
+  /*span after*/
+}
+
+header #nav-drawer #nav-open span,
+header #nav-drawer #nav-open span:before,
+header #nav-drawer #nav-open span:after {
+  position: absolute;
+  height: 3px;
+  width: 25px;
+  background-color: black;
+  border-radius: 3px;
+  display: block;
+  content: "";
+  cursor: pointer;
+}
+
+header #nav-drawer #nav-open span {
+  left: 88.8%;
+  top: 30px;
+}
+
+header #nav-drawer #nav-open span:before {
+  bottom: -8px;
+}
+
+header #nav-drawer #nav-open span:after {
+  bottom: -16px;
+}
+
+header #nav-drawer #nav-close {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+header #nav-drawer #nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  /*left: 20%;*/
+  z-index: 999;
+  /*max-width: 330px;*/
+  height: 100%;
+  width: 57.4%;
+  /*background-color: #fff;*/
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  /*ul*/
+}
+
+header #nav-drawer #nav-content ul {
+  padding-left: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0;
+}
+
+header #nav-drawer #nav-content ul li {
+  list-style: none;
+}
+
+header #nav-drawer #nav-content ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+header #nav-drawer #nav-input:checked ~ #nav-close {
+  display: block;
+  opacity: 0.5;
+}
+
+header #nav-drawer #nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  -webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+/*header*/
+/*-----------------------------------------------------------------
+
+subvisual
+
+------------------------------------------------------------------*/
+.subvisual {
+  /*margin-bottom: 120px;*/
+  background-image: url("../img/subhead.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  position: absolute;
+  width: 100%;
+  top: 80px;
+  z-index: -1;
+}
+
+.subvisual::before {
+  content: "";
+  display: block;
+  height: 80px;
+  position: relative;
+}
+
+.subvisual h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  line-height: 75px;
+  font-weight: normal;
+}
+
+/*-----------------------------------------------------------------
+
+company-greeting
+
+------------------------------------------------------------------*/
+.company-greeting {
+  padding-top: 380px;
+}
+
+.company-greeting .content-wrapper {
+  width: 90%;
+}
+
+.company-greeting .content-wrapper .contents figure {
+  margin-left: 0;
+  width: 50%;
+  float: left;
+}
+
+/*-----------------------------------------------------------------
+
+company-profile
+
+------------------------------------------------------------------*/
+.company-profile {
+  /*content-wrapper*/
+}
+
+.company-profile .content-wrapper {
+  /*table*/
+}
+
+.company-profile .content-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  /*border-top: 1px solid #e8e7e7;*/
+}
+
+.company-profile .content-wrapper table tr {
+  /*th*/
+  /*td*/
+}
+
+.company-profile .content-wrapper table tr th {
+  background-color: #e8e7e7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  width: 30%;
+  line-height: 1.5em;
+  text-align: left;
+  /*border-bottom: 1px solid #fff;*/
+}
+
+.company-profile .content-wrapper table tr td {
+  text-align: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  /*border-bottom: 1px solid #e8e7e7;*/
+  line-height: 1.5em;
+}
+
+/*company-profile*/
+/*-----------------------------------------------------------------
+
+company-map
+
+------------------------------------------------------------------*/
+.company-map {
+  margin-bottom: 0px;
+}
+
+/*-----------------------------------------------------------------
+
+recruit
+
+------------------------------------------------------------------*/
+.floating {
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  display: none;
+}
+
+.floating a {
+  display: block;
+  padding: 18px;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.floating a:hover {
+  opacity: 1;
+}
+
+/*-----------------------------------------------------------------
+
+footer
+
+------------------------------------------------------------------*/
+footer {
+  /*content-wrapper*/
+}
+
+footer .content-wrapper {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+footer .content-wrapper .address {
+  width: 40%;
+  text-align: left;
+}
+
+footer .content-wrapper .address p {
+  line-height: 1.8;
+  white-space: nowrap;
+}
+
+footer .content-wrapper ul {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .copylight {
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  font-size: 0.75em;
+  color: #333;
+  background-color: #e8e7e7;
+}
+
+/*------------------------------------------------------------
+レスポンシブ
+-------------------------------------------------------------*/
+/*------------------------------------------------------------
+レスポンシブpc
+-------------------------------------------------------------*/
+@media screen and (min-width: 1180px) {
+  header {
+    background-color: #e8e7e7;
+    /*background-color: #fff;*/
+    height: 80px;
+    /*nav-drawer*/
+  }
+  header #nav-drawer {
+    position: relative;
+    /*ハンバーガーメニューを非表示に*/
+    /*nav-open*/
+    /*nav-close*/
+    /*nav-content*/
+    /*nav-input:checked*/
+    /*nav-input:checked*/
+  }
+  header #nav-drawer #nav-open {
+    display: none;
+    width: 26px;
+    height: 20px;
+    /*span*/
+    /*span before*/
+    /*span after*/
+  }
+  header #nav-drawer #nav-open span,
+  header #nav-drawer #nav-open span:before,
+  header #nav-drawer #nav-open span:after {
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    border-radius: 3px;
+    display: block;
+    content: "";
+    cursor: pointer;
+  }
+  header #nav-drawer #nav-open span {
+    left: 88.8%;
+  }
+  header #nav-drawer #nav-open span:before {
+    bottom: -8px;
+    /*left: 10px;*/
+  }
+  header #nav-drawer #nav-open span:after {
+    bottom: -16px;
+    /*left: 10px;*/
+  }
+  header #nav-drawer #nav-close {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  header #nav-drawer #nav-content {
+    overflow: auto;
+    position: absolute;
+    width: 57.4%;
+    /*横並びのinner幅*/
+    top: 0;
+    right: 0;
+    z-index: 999;
+    height: 80px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    /*menuを横並びに*/
+    /*ul*/
+  }
+  header #nav-drawer #nav-content ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  header #nav-drawer #nav-content ul li {
+    list-style: none;
+  }
+  header #nav-drawer #nav-content ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    /*font-family: $font-family-title;*/
+  }
+  header #nav-drawer #nav-input:checked ~ #nav-close {
+    display: block;
+    opacity: 0.5;
+  }
+  header #nav-drawer #nav-input:checked ~ #nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+            box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+  }
+  /*header*/
+}
+
+/*include pc*/
+/*------------------------------------------------------------
+レスポンシブtab
+-------------------------------------------------------------*/
+@media screen and (max-width: 1179px) {
+  header {
+    padding-left: 0;
+    background-color: #e8e7e7;
+    height: 80px;
+    /*nav-drawer*/
+  }
+  header #nav-drawer {
+    position: relative;
+    /*nav-open*/
+    /*nav-close*/
+    /*nav-content*/
+    /*nav-input:checked*/
+    /*nav-input:checked*/
+  }
+  header #nav-drawer img {
+    display: none;
+  }
+  header #nav-drawer #nav-open {
+    display: none;
+    width: 26px;
+    height: 20px;
+    /*span*/
+    /*span before*/
+    /*span after*/
+  }
+  header #nav-drawer #nav-open span,
+  header #nav-drawer #nav-open span:before,
+  header #nav-drawer #nav-open span:after {
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    border-radius: 3px;
+    display: block;
+    content: "";
+    cursor: pointer;
+  }
+  header #nav-drawer #nav-open span {
+    left: 88.8%;
+  }
+  header #nav-drawer #nav-open span:before {
+    bottom: -8px;
+    /*left: 10px;*/
+  }
+  header #nav-drawer #nav-open span:after {
+    bottom: -16px;
+    /*left: 10px;*/
+  }
+  header #nav-drawer #nav-close {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  header #nav-drawer #nav-content {
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 14px;
+    width: 55%;
+    /*max-width: initial;*/
+    height: 80px;
+    -webkit-transition: 0ms;
+    transition: 0ms;
+    /*-webkit-transform: translateX(0%);
+transform: translateX(0%);*/
+    /*ul*/
+  }
+  header #nav-drawer #nav-content ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  header #nav-drawer #nav-content ul li {
+    list-style: none;
+  }
+  header #nav-drawer #nav-content ul li a {
+    text-decoration: none;
+    color: #000;
+  }
+  header #nav-drawer #nav-input:checked ~ #nav-close {
+    display: block;
+    opacity: 0.5;
+  }
+  header #nav-drawer #nav-input:checked ~ #nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+            box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+  }
+  /*header*/
+  footer {
+    /*content-wrapper*/
+  }
+  footer .content-wrapper {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 50px 0;
+  }
+  footer .content-wrapper .address {
+    width: 40%;
+    text-align: left;
+  }
+  footer .content-wrapper .address p {
+    line-height: 1.8;
+  }
+  footer .content-wrapper ul {
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .content-wrapper ul li {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  footer .copylight {
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    font-size: 0.75em;
+    color: #333;
+    background-color: #e8e7e7;
+  }
+}
+
+/*include tab*/
+/*------------------------------------------------------------
+レスポンシブsp
+-------------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  header {
+    padding: 0;
+    background-color: #e8e7e7;
+    height: 80px;
+    /*nav-drawer*/
+  }
+  header #nav-drawer {
+    position: relative;
+    /*ハンバーガーメニューを表示*/
+    /*nav-open*/
+    /*nav-close*/
+    /*menuを*/
+    /*nav-content*/
+    /*nav-input:checked*/
+    /*クリックしたら表示*/
+    /*nav-input:checked*/
+    /*nav-input:checked*/
+  }
+  header #nav-drawer img {
+    margin-left: 16px;
+    margin-top: 21.5px;
+    margin-bottom: 21.5px;
+  }
+  header #nav-drawer #nav-open {
+    display: block;
+    width: 26px;
+    height: 20px;
+    /*span*/
+    /*span before*/
+    /*span after*/
+  }
+  header #nav-drawer #nav-open span,
+  header #nav-drawer #nav-open span:before,
+  header #nav-drawer #nav-open span:after {
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    border-radius: 3px;
+    display: block;
+    content: "";
+    cursor: pointer;
+  }
+  header #nav-drawer #nav-open span {
+    left: 88.8%;
+  }
+  header #nav-drawer #nav-open span:before {
+    bottom: -8px;
+    /*left: 10px;*/
+  }
+  header #nav-drawer #nav-open span:after {
+    bottom: -16px;
+    /*left: 10px;*/
+  }
+  header #nav-drawer #nav-close {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0;
+    z-index: 998;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  header #nav-drawer #nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 197px;
+    z-index: 999;
+    width: 55%;
+    max-width: 90%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    -webkit-transform: translateX(-150%);
+    /*クリックする前は非表示*/
+    transform: translateX(-150%);
+    /*ul*/
+  }
+  header #nav-drawer #nav-content ul {
+    display: initial;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header #nav-drawer #nav-content ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  header #nav-drawer #nav-content ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  header #nav-drawer #nav-input:checked ~ #nav-close {
+    display: block;
+    opacity: 0.4;
+    cursor: pointer;
+  }
+  header #nav-drawer #nav-input:checked ~ #nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.16);
+            box-shadow: 6px 0 25px rgba(0, 0, 0, 0.16);
+  }
+  header #nav-drawer #nav-input:checked ~ #nav-open {
+    /*span*/
+  }
+  header #nav-drawer #nav-input:checked ~ #nav-open span {
+    width: 0;
+    top: 18px;
+    left: 88.8%;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  header #nav-drawer #nav-input:checked ~ #nav-open span:before {
+    left: 88.8%;
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  header #nav-drawer #nav-input:checked ~ #nav-open span:after {
+    left: 88.8%;
+    top: 18px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  /*header*/
+  .company-greeting {
+    padding-top: 380px;
+  }
+  .company-greeting .content-wrapper {
+    width: 90%;
+  }
+  .company-greeting .content-wrapper .contents figure {
+    margin-left: 0;
+    width: 100%;
+    float: none;
+  }
+  footer {
+    /*content-wrapper*/
+  }
+  footer .content-wrapper {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 50px 0;
+  }
+  footer .content-wrapper .address {
+    width: 100%;
+    text-align: center;
+  }
+  footer .content-wrapper .address p {
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+  footer .content-wrapper ul {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .content-wrapper ul li {
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+  footer .copylight {
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    font-size: 0.75em;
+    color: #333;
+    background-color: #e8e7e7;
+  }
+}
+/*# sourceMappingURL=company.css.map */
